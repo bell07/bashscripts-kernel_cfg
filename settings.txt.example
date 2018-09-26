@@ -1,0 +1,6 @@
+## Kernel sources path
+# KERNEL_SOURCE_PATH=/usr/src/linux
+
+
+## Configuration path. By default in application subdir
+# CFG_PATH="$APPL_DIR"/cfg

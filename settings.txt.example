@@ -4,3 +4,7 @@
 
 ## Configuration path. By default in application subdir
 # CFG_PATH="$APPL_DIR"/cfg
+
+
+## Configuration Modules to be applied
+# CFG_MODULES='*'

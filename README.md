@@ -15,9 +15,10 @@ Therefore the file arch/x86/configs/x86_64_defconfig is used for the config base
  ## How to use
  
   1. Backup your current /usr/src/.linux config file
-  2. Check if you need all files in cfg folder. Just rename it to `*.bak` to ignore the files
-  3. If you know settings you need, create new 99* file (like `cfg/99_my_settings.config`)
-  4. run `sh kernel_cfg.sh`
-  5. Check the config / compare with your backup
-  6. Create issue in case of issues or new usefull pre-setting
-  7. Build the kernel and enjoy
+  2. Create settings.txt from example. Check the settings
+  3. Check if you need all configuration modules in cfg folder. Adjust the setting in settings.txt
+  4. If you know settings you need, create new 99* file (like `cfg/99_my_settings.config`)
+  5. run `sh kernel_cfg.sh`
+  6. Check the config / compare with your backup
+  7. Create issue in case of issues or new usefull pre-setting
+  8. Build the kernel and enjoy

@@ -12,7 +12,16 @@ source "$APPL_DIR"/settings.txt
 CFG_PATH="${CFG_PATH:-"$APPL_DIR"/cfg}"
 KERNEL_SOURCE_PATH="${KERNEL_SOURCE_PATH:-/usr/src/linux}"
 
-cd $KERNEL_SOURCE_PATH
+CFG_MODULES="${CFG_MODULES:-*}"
+
 echo "Apply config patches from $CFG_PATH to $KERNEL_SOURCE_PATH"
-cat arch/x86/configs/x86_64_defconfig "$CFG_PATH"/*.config > .config
+
+cd "$CFG_PATH"
+ALL_MODULES=$(eval ls -1 $CFG_MODULES | grep '.config$')
+
+echo "Selected configuration modules:" $ALL_MODULES
+
+cat "$KERNEL_SOURCE_PATH"/arch/x86/configs/x86_64_defconfig $ALL_MODULES > "$KERNEL_SOURCE_PATH"/.config
+
+cd "$KERNEL_SOURCE_PATH"
 make olddefconfig

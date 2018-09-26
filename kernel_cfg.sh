@@ -24,4 +24,5 @@ echo "Selected configuration modules:" $ALL_MODULES
 cat "$KERNEL_SOURCE_PATH"/arch/x86/configs/x86_64_defconfig $ALL_MODULES > "$KERNEL_SOURCE_PATH"/.config
 
 cd "$KERNEL_SOURCE_PATH"
-make olddefconfig
+make olddefconfig 2> /dev/null
+echo "Config done in $KERNEL_SOURCE_PATH/.config"

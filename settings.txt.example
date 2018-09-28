@@ -7,4 +7,4 @@
 
 
 ## Configuration Modules to be applied
-# CFG_MODULES='*'
+CFG_MODULES="00* 10* 60_mmc_card.config 70_bluetooth.config 70_wifi.config"

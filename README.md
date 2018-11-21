@@ -33,10 +33,10 @@ File(s) | Use-case
 20* | Try to support all hardware. Useful for live-media kernels that should work with any hardware
 **Hardware class support** | **useful if you have such hardware**
 30_hwsupport_bluetooth.config | Support the bluetooth stack
-30_hwsupport_intel_MEI.config | Support for Intel managemen Engine found on modern Intel devices
 30_hwsupport_uefi_boot.config | UEFI boot and framebuffer
 30_hwsupport_wifi.config | WIFI stack (Driver needs to be enabled in addition)
 **Hardware support** | **useful if you have such hardware**
+30_hardware_intel_MEI.config | Support for Intel managemen Engine found on modern Intel devices
 40_hardware_mmc_card.config | Support for MMC card, found in modern devices
 40_hardware_vmware_guest.config | All required configuration needed for Vmware guest
 **Services support**  | **useful if you like to run this services**

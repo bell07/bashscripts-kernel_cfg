@@ -14,14 +14,19 @@ KERNEL_SOURCE_PATH="${KERNEL_SOURCE_PATH:-/usr/src/linux}"
 
 CFG_MODULES="${CFG_MODULES:-*}"
 
-echo "Apply config patches from $CFG_PATH to $KERNEL_SOURCE_PATH"
+cd "$CFG_PATH" || exit 1
 
-cd "$CFG_PATH"
-ALL_MODULES=$(eval ls -1 $CFG_MODULES | grep '.config$')
+echo "apply arch/x86/configs/x86_64_defconfig"
+cp "$KERNEL_SOURCE_PATH"/arch/x86/configs/x86_64_defconfig "$KERNEL_SOURCE_PATH"/.config
 
-echo "Selected configuration modules:" $ALL_MODULES
-
-cat "$KERNEL_SOURCE_PATH"/arch/x86/configs/x86_64_defconfig $ALL_MODULES > "$KERNEL_SOURCE_PATH"/.config
+for file in $CFG_MODULES; do
+	if [ -z "${file##*.config}" ]; then
+		echo "apply $file"
+		cat "$file" >> "$KERNEL_SOURCE_PATH"/.config
+	else
+		echo "skip $file"
+	fi
+done
 
 make -C "$KERNEL_SOURCE_PATH" olddefconfig 2> /dev/null
 echo "Config done in $KERNEL_SOURCE_PATH/.config"

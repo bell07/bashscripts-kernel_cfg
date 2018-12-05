@@ -3,6 +3,10 @@
 Simple script to generate linux kernel config file.
 Known working environment: gentoo-sources for x86_64
 
+ License: GPL-3+
+ 
+ Gentoo Forum thread: https://forums.gentoo.org/viewtopic-t-1090188.html
+
 ## How kernel_cfg.sh script works
 
   1. Basically there is an assumption the kernel developers does set useful default values in kernel tree.
@@ -16,8 +20,8 @@ Therefore the file arch/x86/configs/x86_64_defconfig is used for the config base
  ## How to use
  
   1. Backup your current /usr/src/.linux config file
-  2. Create settings.txt from example. Check the settings
-  3. Check if you need all configuration modules in cfg folder. Adjust the setting in settings.txt
+  2. Create settings.env from example. Check the settings
+  3. Check if you need all configuration modules in cfg folder. Adjust the setting in settings.env
   4. If you know additional settings you need, create new 99* file (like `cfg/99_my_settings.config`)
   5. run `sh kernel_cfg.sh`
   6. Check the config comparing with your backup

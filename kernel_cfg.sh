@@ -12,12 +12,14 @@ source "$APPL_DIR"/settings.env
 CFG_PATH="${CFG_PATH:-"$APPL_DIR"/cfg}"
 KERNEL_SOURCE_PATH="${KERNEL_SOURCE_PATH:-/usr/src/linux}"
 
+BASE_DEFCONFIG="${BASE_DEFCONFIG:-arch/x86/configs/x86_64_defconfig}"
+
 CFG_MODULES="${CFG_MODULES:-*}"
 
 cd "$CFG_PATH" || exit 1
 
-echo "apply arch/x86/configs/x86_64_defconfig"
-cp "$KERNEL_SOURCE_PATH"/arch/x86/configs/x86_64_defconfig "$KERNEL_SOURCE_PATH"/.config
+echo "apply $BASE_DEFCONFIG"
+cp "$KERNEL_SOURCE_PATH"/"$BASE_DEFCONFIG" "$KERNEL_SOURCE_PATH"/.config
 
 for file in $CFG_MODULES; do
 	if [ -z "${file##*.config}" ]; then

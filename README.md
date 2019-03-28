@@ -17,7 +17,7 @@ Known working environment: gentoo-sources (up to 5.0)
   3. In step 2 the files are just concatenated. To get proper config file the `make olddefconfig` is called. 
 
   
- ## How to use
+## How to use
  
   1. Backup your current /usr/src/linux/.config config file
   2. Create settings.env from example. Check the settings
@@ -27,6 +27,11 @@ Known working environment: gentoo-sources (up to 5.0)
   6. Check the config comparing with your backup. Hint: for easier comparing the files could be sorted ;-)
   7. Create issue in case of issues or new usefull pre-setting
   8. Build the kernel and enjoy
+
+### Enhanced usage
+The kernel_cfg can handle different profiles using different settings.env files. Just call the kernel_cfg with the other env file as parameter `./kernel_cfg config_second.env`.
+I recommend to utilize CONFIG_LOCALVERSION for different kernels in custom config snippet. Set the "KERNEL_LOCALVERSION" parameter in second setting.env file to adjust the CONFIG_LOCALVERSION.
+
 
 ## Configuration files
 File(s) | Use-case

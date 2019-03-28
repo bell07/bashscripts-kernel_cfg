@@ -47,7 +47,8 @@ File(s) | Use-case
 **Hardware support** | **useful if you have such hardware**
 30_hardware_intel_MEI.config | Support for Intel management engine found on modern Intel devices
 40_hardware_mmc_card.config | Support for MMC card, found on modern devices
-40_hardware_vmware_guest.config | All required configuration needed for Vmware guest
+40_hardware_realtec_sdcard.conf | Support for PCIe and USB SD-Card reader like RTS525A
+41_hardware_vmware_guest.config | All required configuration needed for Vmware guest
 **Services support**  | **useful if you like to run this services**
 50_docker.config | Docker server support
 50_lxc.config | LXC server support

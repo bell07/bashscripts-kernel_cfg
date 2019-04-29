@@ -56,3 +56,4 @@ File(s) | Use-case
 60_support_zram.config | Support for zram/zswap
 **Firewall support** | **useful if the system is such firewall**
 80_net_ebtables.config | EBTables Bridge filtering, useful with LXC server for example
+80_net_ppp.config | PPP configuration as needed for ppp package

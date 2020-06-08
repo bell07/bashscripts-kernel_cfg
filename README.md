@@ -1,7 +1,7 @@
 # kernel_cfg.sh
 
 Simple script to generate linux kernel config file.
-Known working environment: gentoo-sources (up to 5.4)
+Known working environment: gentoo-sources (up to 5.6)
 
  License: GPL-3+
  
@@ -46,8 +46,10 @@ File(s) | Use-case
 30_hwsupport_wifi.config | WIFI stack (Driver needs to be enabled in addition)
 **Hardware support** | **useful if you have such hardware**
 30_hardware_intel_MEI.config | Support for Intel management engine found on modern Intel devices
+40_hardware_joystick.config | Common Joypads and Joysticks (USB)
 40_hardware_mmc_card.config | Support for MMC card, found on modern devices
 40_hardware_realtec_sdcard.conf | Support for PCIe and USB SD-Card reader like RTS525A
+40_hardware_webcam.config | Common Webcams (UVC class)
 41_hardware_vmware_guest.config | All required configuration needed for Vmware guest
 **Services support**  | **useful if you like to run this services**
 50_docker.config | Docker server support

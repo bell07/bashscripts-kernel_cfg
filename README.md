@@ -48,6 +48,7 @@ File(s) | Use-case
 30_hardware_intel_MEI.config | Support for Intel management engine found on modern Intel devices
 40_hardware_joystick.config | Common Joypads and Joysticks (USB)
 40_hardware_mmc_card.config | Support for MMC card, found on modern devices
+40_hardware_nvme_ssd.config | Support for NVMe SSD
 40_hardware_realtec_sdcard.conf | Support for PCIe and USB SD-Card reader like RTS525A
 40_hardware_webcam.config | Common Webcams (UVC class)
 41_hardware_vmware_guest.config | All required configuration needed for Vmware guest

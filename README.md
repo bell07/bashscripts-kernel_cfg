@@ -45,7 +45,7 @@ File(s) | Use-case
 30_hwsupport_uefi_boot.config | UEFI boot and framebuffer
 30_hwsupport_wifi.config | WIFI stack (Driver needs to be enabled in addition)
 **Hardware support** | **useful if you have such hardware**
-30_hardware_intel_MEI.config | Support for Intel management engine found on modern Intel devices
+30_hardware_intel.config | Support for Intel specific drivers like MEI or LPSS
 40_hardware_joystick.config | Common Joypads and Joysticks (USB)
 40_hardware_mmc_card.config | Support for MMC card, found on modern devices
 40_hardware_nvme_ssd.config | Support for NVMe SSD

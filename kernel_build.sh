@@ -30,7 +30,7 @@ fi
 ## Take the installation steps
 cd "$KERNEL_SOURCE_PATH"
 
-make -j6 && make modules_install
+make -j$(($(nproc)+1)) && make modules_install
 
 if [ "$INSTALL_VERSION" == "true" ]; then
 	APPEND_VERSION="-$(make kernelrelease)"

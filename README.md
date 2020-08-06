@@ -1,7 +1,7 @@
 # kernel_cfg.sh
 
 Simple script to generate linux kernel config file.
-Known working environment: gentoo-sources (up to 5.6)
+Known working environment: gentoo-sources (up to 5.7)
 
  License: GPL-3+
  

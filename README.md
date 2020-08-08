@@ -43,9 +43,12 @@ File(s) | Use-case
 **Hardware class support** | **useful if you have such hardware**
 30_hwsupport_bluetooth.config | Support the bluetooth stack
 30_hwsupport_uefi_boot.config | UEFI boot and framebuffer
+30_hwsupport_usb3_typec.config | USB3 TYPE-C port features
 30_hwsupport_wifi.config | WIFI stack (Driver needs to be enabled in addition)
+
 **Hardware support** | **useful if you have such hardware**
-30_hardware_intel.config | Support for Intel specific drivers like MEI or LPSS
+40_hardware_intel.config | Support for Intel specific drivers like MEI or LPSS
+40_hardware_intel_ipu3.config | Support for Intel IPU3 image processing unit
 40_hardware_joystick.config | Common Joypads and Joysticks (USB)
 40_hardware_mmc_card.config | Support for MMC card, found on modern devices
 40_hardware_nvme_ssd.config | Support for NVMe SSD

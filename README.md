@@ -33,13 +33,18 @@ The kernel_cfg can handle different profiles using different settings.env files.
 I recommend to utilize CONFIG_LOCALVERSION for different kernels in custom config snippet. Set the "KERNEL_LOCALVERSION" parameter in second setting.env file to adjust the CONFIG_LOCALVERSION.
 
 
+Instead of basis config provided by kernel it is possible to use kernel configuration from other distributions.
+The script `./get_distro_defaults.sh` download the latest gentoo and arch configs.
+Set the `CFG_DEFCONFIG="distro/??.config"` to your preferred one.
+
 ## Configuration files
 File(s) | Use-case
 -----| -----
 **Default settings** | 
 00* | Default configuration adjustments that **should be in any kernel**. Some parameters are overriden in next settings files
 10* | Disable stuff to get the kernel smaller by default. Useful for non-universal kernels bound to a hardware. Some parameters are re-activated in other config files
-20* | Try to support all hardware. Useful for live-media kernels that should work with any hardware
+20* | Try to support all hardware. Useful for live-media kernels that should work with any hardware. Currently all files removed, because the distro files are beter maintained for live media.
+I recommend to use the distro config for live systems.
 **Hardware class support** | **useful if you have such hardware**
 30_hwsupport_bluetooth.config | Support the bluetooth stack
 30_hwsupport_uefi_boot.config | UEFI boot and framebuffer

@@ -42,29 +42,13 @@ File(s) | Use-case
 -----| -----
 **Default settings** | 
 00* | Default configuration adjustments that **should be in any kernel**. Some parameters are overriden in next settings files
-10* | Disable stuff to get the kernel smaller by default. Useful for non-universal kernels bound to a hardware. Some parameters are re-activated in other config files
-20* | Try to support all hardware. Useful for live-media kernels that should work with any hardware. Currently all files removed, because the distro files are beter maintained for live media.
-I recommend to use the distro config for live systems.
-**Hardware class support** | **useful if you have such hardware**
-30_hwsupport_bluetooth.config | Support the bluetooth stack
-30_hwsupport_uefi_boot.config | UEFI boot and framebuffer
-30_hwsupport_usb3_typec.config | USB3 TYPE-C port features
-30_hwsupport_wifi.config | WIFI stack (Driver needs to be enabled in addition)
+10* | Disable stuff to get the kernel smaller by default. Useful for non-universal kernels bound to a hardware. Some parameters are re-activated in other config files.
 
-**Hardware support** | **useful if you have such hardware**
-40_hardware_intel.config | Support for Intel specific drivers like MEI or LPSS
-40_hardware_intel_ipu3.config | Support for Intel IPU3 image processing unit
-40_hardware_joystick.config | Common Joypads and Joysticks (USB)
-40_hardware_mmc_card.config | Support for MMC card, found on modern devices
-40_hardware_nvme_ssd.config | Support for NVMe SSD
-40_hardware_realtec_sdcard.conf | Support for PCIe and USB SD-Card reader like RTS525A
-40_hardware_webcam.config | Common Webcams (UVC class)
-41_hardware_vmware_guest.config | All required configuration needed for Vmware guest
 **Services support**  | **useful if you like to run this services**
 50_docker.config | Docker server support
 50_lxc.config | LXC server support
-**Misc support**  | **useful if you like it**
-60_support_zram.config | Support for zram/zswap
-**Firewall support** | **useful if the system is such firewall**
-80_net_ebtables.config | EBTables Bridge filtering, useful with LXC server for example
-80_net_ppp.config | PPP configuration as needed for ppp package
+50_virtualbox_guest.config | All required configuration needed for Virtualbox guest
+50_vmware_guest.config | All required configuration needed for Vmware guest
+
+**Custom **  | **Additional configuration**
+99_*.config | It's yours! The files are ignored by git. Create your own settings

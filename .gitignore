@@ -1,3 +1,2 @@
 cfg/99_*.config
-distro/*.config
 settings*.env

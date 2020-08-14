@@ -43,8 +43,11 @@ Please create issue on github
 File(s) | Use-case
 -----| -----
 **Default settings** | 
-00* | Default configuration adjustments that **should be in any kernel**. Some parameters are overriden in next settings files
-10* | Disable stuff to get the kernel smaller by default. Useful for non-universal kernels bound to a hardware. Some parameters are re-activated in other config files.
+00_defaults.config | Default configuration adjustments that **should be in any kernel**. Some parameters are overriden in next settings files
+10_disable_*.config | Disable stuff to get the kernel smaller by default. Useful for non-universal kernels bound to a hardware. Some parameters are re-activated in other config files.
+
+**Special system settings** |
+20_enable_usbroot_boot.config | Set USB and USB storage modules builtin into kernel to be able to boot without initramfs from USB
 
 **Services support**  | **useful if you like to run this services**
 50_docker.config | Docker server support

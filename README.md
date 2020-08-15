@@ -46,8 +46,9 @@ File(s) | Use-case
 00_defaults.config | Default configuration adjustments that **should be in any kernel**. Some parameters are overriden in next settings files
 10_disable_*.config | Disable stuff to get the kernel smaller by default. Useful for non-universal kernels bound to a hardware. Some parameters are re-activated in other config files.
 
-**Special system settings** |
-20_enable_usbroot_boot.config | Set USB and USB storage modules builtin into kernel to be able to boot without initramfs from USB
+**Enable boot capability inintramfs** |
+20_enable_boot_mmc_sdhci_root.config | Boot from SSD type MMC on PCI Secure Digital Host Controller (SDHCI_PCI) 
+20_enable_boot_usb_root.config | Boot from USB storage disk
 
 **Services support**  | **useful if you like to run this services**
 50_docker.config | Docker server support

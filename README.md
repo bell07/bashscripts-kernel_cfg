@@ -48,7 +48,11 @@ File(s) | Use-case
 
 **Enable boot capability inintramfs** |
 20_enable_boot_mmc_sdhci_root.config | Boot from SSD type MMC on PCI Secure Digital Host Controller (SDHCI_PCI) 
+20_enable_boot_nvme_root.config | Boot from NVMe SSD
 20_enable_boot_usb_root.config | Boot from USB storage disk
+
+**Additional Hardware
+30_enable_hw_xpad.config | X-BOX Gamepad
 
 **Services support**  | **useful if you like to run this services**
 50_docker.config | Docker server support

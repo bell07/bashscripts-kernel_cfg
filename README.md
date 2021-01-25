@@ -1,7 +1,7 @@
 # kernel_cfg.sh
 
 Simple script to generate linux kernel config file.
-Known working environment: gentoo-sources (up to 5.7)
+Known working environment: gentoo-sources
 
  License: GPL-3+
  
@@ -9,8 +9,7 @@ Known working environment: gentoo-sources (up to 5.7)
 
 ## How kernel_cfg.sh script works
 
-  1. Basically there is an assumption the kernel developers does set useful default values in kernel tree.
-     Therefore the arch/x86/configs/*_defconfig file is used for the config base.
+  1. Basically there is an assumption the kernel developers does set useful default values. The kernel-tree config file `arch/x86/configs/*_defconfig` or provided distro config files in `kernel_cfg/distro` can be used as starting base.
 
   2. The provided configuration modifiers `cfg/*.config` contains the additional settings and is able to override the defconfig values. It is possible to enhance the configuration by own files placed in cfg folder. If you create own files, please contribute them to the project if useful for other users.
   

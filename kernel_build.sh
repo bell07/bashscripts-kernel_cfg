@@ -14,7 +14,7 @@ if ! [ -f "$SETTINGS_FILE" ]; then
 fi
 
 echo "Use settings file $SETTINGS_FILE"
-source "$SETTINGS_FILE"
+. "$SETTINGS_FILE"
 
 KERNEL_SOURCE_PATH="${KERNEL_SOURCE_PATH:-/usr/src/linux}"
 INSTALL_VERSION="${INSTALL_VERSION:-true}"

@@ -15,7 +15,7 @@ fi
 
 echo "Use settings file $SETTINGS_FILE"
 
-source "$SETTINGS_FILE"
+. "$SETTINGS_FILE"
 
 CFG_PATH="${CFG_PATH:-"$APPL_DIR"/cfg}"
 KERNEL_SOURCE_PATH="${KERNEL_SOURCE_PATH:-/usr/src/linux}"

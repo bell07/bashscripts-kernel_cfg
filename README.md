@@ -12,10 +12,10 @@ Known working environment: gentoo
   1. Basically there is an assumption the kernel developers does set useful default values. The kernel-tree config file `arch/x86/configs/*_defconfig` or provided distro config files in `kernel_cfg/distro` can be used as starting base.
 
   2. The provided configuration modifiers `cfg/*.config` contains the additional settings and is able to override the defconfig values. It is possible to enhance the configuration by own files placed in cfg folder. If you create own files, please contribute them to the project if useful for other users.
-  
+
   3. In step 2 the files are just concatenated. To get proper config file the `make olddefconfig` is called.
 
-  
+
 ## How to use
  
   1. Backup your current /usr/src/linux/.config config file
@@ -63,6 +63,7 @@ File(s) | Use-case
 20_enable_boot_usb_root.config | Boot from USB storage disk
 **Additional Hardware** |
 30_enable_hw_xpad.config | X-BOX Gamepad
+30_enable_intel_device.config | Enable usual intel hardware (realtek lan, intel wifi, intel kvm ...)
 **Services support**  | **useful if you like to run this services**
 50_docker.config | Docker server support
 50_lxc.config | LXC server support

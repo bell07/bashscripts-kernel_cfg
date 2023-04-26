@@ -4,6 +4,8 @@ APPL_DIR=$(dirname "$(readlink -f "$0")")
 ## Handle Settings
 if [ -n "$1" ]; then
 	SETTINGS_FILE="$(realpath "$1")"
+elif [ -f "/etc/kernel-cfg.env" ]; then
+	SETTINGS_FILE="/etc/kernel-cfg.env"
 else
 	SETTINGS_FILE="$APPL_DIR"/settings.env
 fi

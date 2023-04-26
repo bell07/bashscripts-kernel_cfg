@@ -19,11 +19,12 @@ echo "Use settings file $SETTINGS_FILE"
 
 . "$SETTINGS_FILE"
 
-CFG_PATH="${CFG_PATH:-"$APPL_DIR"/cfg}"
+CFG_PATH="${CFG_PATH:-/etc/kernel/config.d}"
 KERNEL_SOURCE_PATH="${KERNEL_SOURCE_PATH:-/usr/src/linux}"
 
 CFG_DEFCONFIG="${CFG_DEFCONFIG:-arch/x86/configs/x86_64_defconfig}"
 [ -f "$KERNEL_SOURCE_PATH"/"$CFG_DEFCONFIG" ] && CFG_DEFCONFIG="$KERNEL_SOURCE_PATH"/"$CFG_DEFCONFIG"
+[ -f /usr/share/kernel_cfg/"$CFG_DEFCONFIG" ] && CFG_DEFCONFIG=/usr/share/kernel_cfg/"$CFG_DEFCONFIG"
 [ -f "$APPL_DIR"/"$CFG_DEFCONFIG" ] && CFG_DEFCONFIG="$APPL_DIR"/"$CFG_DEFCONFIG"
 
 CFG_MODULES="${CFG_MODULES:-*}"

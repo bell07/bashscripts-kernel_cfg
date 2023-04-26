@@ -29,6 +29,7 @@ CFG_DEFCONFIG="${CFG_DEFCONFIG:-arch/x86/configs/x86_64_defconfig}"
 
 CFG_MODULES="${CFG_MODULES:-*}"
 
+echo "use config snippets from $CFG_PATH"
 cd "$CFG_PATH" || exit 1
 
 echo "apply $CFG_DEFCONFIG"

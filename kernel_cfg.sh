@@ -19,7 +19,7 @@ echo "Use settings file $SETTINGS_FILE"
 
 . "$SETTINGS_FILE"
 
-CFG_PATH="${CFG_PATH:-/etc/kernel/config.d}"
+CFG_PATH="${CFG_PATH:-/etc/kernel/config.avail}"
 KERNEL_SOURCE_PATH="${KERNEL_SOURCE_PATH:-/usr/src/linux}"
 
 CFG_DEFCONFIG="${CFG_DEFCONFIG:-/usr/src/linux/arch/x86/configs/x86_64_defconfig}"

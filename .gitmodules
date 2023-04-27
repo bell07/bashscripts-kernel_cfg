@@ -1,0 +1,3 @@
+[submodule "3rdparty/gentoo-kernel-config"]
+	path = 3rdparty/gentoo-kernel-config
+	url = https://github.com/projg2/gentoo-kernel-config

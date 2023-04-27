@@ -79,6 +79,7 @@ File(s) | Use-case
 -----| -----
 **Default settings** | 
 00_defaults.config | Default configuration adjustments that **should be in any kernel**. Some parameters are overriden in next settings files
+01_gentoo*.config | Gentoo base defaults from https://github.com/projg2/gentoo-kernel-config and used in sys-kernel/gentoo-kernel ebuild. No need to enable if the ebuild is used.
 10_disable_\*.config | Disable stuff to get the kernel smaller by default. Useful for non-universal kernels bound to a hardware. Some parameters are re-activated in other config files.
 **Enable boot capability without inintramfs** |
 20_enable_boot_mmc_sdhci_root.config | Boot from SSD type MMC on PCI Secure Digital Host Controller (SDHCI_PCI) 

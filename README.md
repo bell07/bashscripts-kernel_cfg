@@ -86,7 +86,6 @@ File(s) | Use-case
 20_enable_boot_nvme_root.config | Boot from NVMe SSD
 20_enable_boot_usb_root.config | Boot from USB storage disk
 **Additional Hardware** |
-30_enable_hw_xpad.config | X-BOX Gamepad
 30_enable_intel_device.config | Enable usual intel hardware (realtek lan, intel wifi, intel kvm, intel iommu ...)
 30_enable_amd_device.config | Enable usual AMD hardware (amd kvm, amd iommu ...)
 **Services support**  | **useful if you like to run this services**

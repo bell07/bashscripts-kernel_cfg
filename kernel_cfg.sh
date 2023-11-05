@@ -21,6 +21,7 @@ echo "Use settings file $SETTINGS_FILE"
 
 CFG_PATH="${CFG_PATH:-/etc/kernel/config.avail}"
 KERNEL_SOURCE_PATH="${KERNEL_SOURCE_PATH:-/usr/src/linux}"
+KBUILD_OUTPUT="${KBUILD_OUTPUT:-/usr/src/linux}"
 
 CFG_DEFCONFIG="${CFG_DEFCONFIG:-/usr/src/linux/arch/x86/configs/x86_64_defconfig}"
 if [ "$(echo "$CFG_DEFCONFIG" | cut -c 1)" != "/" ]; then
@@ -40,21 +41,21 @@ echo "use config snippets from $CFG_PATH"
 cd "$CFG_PATH" || exit 1
 
 echo "apply $CFG_DEFCONFIG"
-cp "$CFG_DEFCONFIG" "$KERNEL_SOURCE_PATH"/.config
+cp "$CFG_DEFCONFIG" "$KBUILD_OUTPUT"/.config
 
 if [ -n "$KERNEL_LOCALVERSION" ]; then
 	echo "Set CONFIG_LOCALVERSION to $KERNEL_LOCALVERSION"
-	echo "CONFIG_LOCALVERSION=\"$KERNEL_LOCALVERSION\"" >> "$KERNEL_SOURCE_PATH"/.config
+	echo "CONFIG_LOCALVERSION=\"$KERNEL_LOCALVERSION\"" >> "$KBUILD_OUTPUT"/.config
 fi
 
 for file in $CFG_MODULES; do
 	if [ -z "${file##*.config}" ]; then
 		echo "apply $file"
-		cat "$file" >> "$KERNEL_SOURCE_PATH"/.config
+		cat "$file" >> "$KBUILD_OUTPUT"/.config
 	else
 		echo "skip $file"
 	fi
 done
 
-make -C "$KERNEL_SOURCE_PATH" olddefconfig 2> /dev/null
-echo "Config done in $KERNEL_SOURCE_PATH/.config"
+make -C "$KBUILD_OUTPUT" olddefconfig 2> /dev/null
+echo "Config done in $KBUILD_OUTPUT/.config"

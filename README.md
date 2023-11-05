@@ -13,27 +13,28 @@ Known working environment: gentoo
 
   2. The provided configuration modifiers `cfg/*.config` contains the additional settings and is able to override the defconfig values. It is possible to enhance the configuration by own files placed in cfg folder. If you create own files, please contribute them to the project if useful for other users.
 
-  3. In step 2 the files are just concatenated. To get proper config file the `make olddefconfig` is called.
+  3. At the next the files are just concatenated. To get proper config file the `make olddefconfig` is called.
 
 
 ## Howto install
 
-In Gentoo the sys-kernel/kernel-cfg package is available in bell07 overlay
-Without gentoo just checkout the repo and call the scripts from project directory
+In Gentoo the sys-kernel/kernel-cfg package is available in bell07 overlay.
+
+Without gentoo just checkout the repo and call the scripts from project directory.
 
 
 ## How to use
 
   1. Backup your current /usr/src/linux/.config config file
   2. Create settings.env from example
-  3. Choose your base configuration `CFG_DEFCONFIG="??.config"` (archlinux, gentoo-genkernel, gentoo-fedora-x86_64 or kernel-provided defconfig) in settings.env to your preferred one.
-  3.1. Check which configuration modules in cfg folder you need. Adjust the `CFG_MODULES` in settings.env
-  4. If you know additional settings you need, create new 99* files (like `cfg/99_my_settings.config` )
-  5. run `kernel_cfg.sh`
-  6. Check the config comparing with your backup. Hint: for easier comparing the files could be sorted ;-)
-  7. Create issue in case of issues or new usefull pre-setting
-  8. Build and install the kernel using `kernel_build.sh`
-  9. Reboot and and enjoy
+  3. Choose your base configuration `CFG_DEFCONFIG="??.config"` (archlinux, gentoo-genkernel, gentoo-fedora-x86_64 or kernel-provided defconfig) in settings.env to your preferred one.   
+  4. Check which configuration modules in cfg folder you need. Adjust the `CFG_MODULES` in settings.env
+  5. If you know additional settings you need, create new 99* files (like `cfg/99_my_settings.config` )
+  6. run `kernel_cfg.sh`
+  7. Check the config comparing with your backup. Hint: for easier comparing the files could be sorted ;-)
+  8. Create issue in case of issues or new usefull pre-setting
+  9. Build and install the kernel using `kernel_build.sh`
+  10. Reboot and and enjoy
 
 
 ## Gentoo ebuild notes

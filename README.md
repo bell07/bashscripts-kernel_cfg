@@ -94,5 +94,6 @@ File(s) | Use-case
 50_lxc.config | LXC server support
 50_virtualbox_guest.config | All required configuration needed for Virtualbox guest
 50_vmware_guest.config | All required configuration needed for Vmware guest
+50_waydroid_host.config | Settings required to run waydroid
 **Custom**  | **Additional configuration**
 99_\*.config | It's yours! The files are ignored by git. Create your own settings

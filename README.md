@@ -87,8 +87,9 @@ File(s) | Use-case
 20_enable_boot_nvme_root.config | Boot from NVMe SSD
 20_enable_boot_usb_root.config | Boot from USB storage disk
 **Additional Hardware** |
-30_enable_intel_device.config | Enable usual intel hardware (realtek lan, intel wifi, intel kvm, intel iommu ...)
 30_enable_amd_device.config | Enable usual AMD hardware (amd kvm, amd iommu ...)
+30_enable_intel_device.config | Enable usual intel hardware (realtek lan, intel wifi, intel kvm, intel iommu ...)
+30_enable_steamdeck_device.config | Hardware related configurations for Valve's Steam Deck handheld
 **Services support**  | **useful if you like to run this services**
 50_docker.config | Docker server support
 50_lxc.config | LXC server support

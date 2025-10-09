@@ -4,7 +4,7 @@ wget 'https://gitlab.com/evlaV/jupiter-PKGBUILD/-/raw/master/linux-neptune-615/c
 
 wget 'https://gitweb.gentoo.org/proj/genkernel.git/plain/defaults/kernel-generic-config' -O "$APPL_DIR"/distro/gentoo-genkernel.config
 wget 'https://gitlab.archlinux.org/archlinux/packaging/packages/linux/-/raw/main/config?inline=false' -O "$APPL_DIR"/distro/archlinux.config
-wget 'https://raw.githubusercontent.com/projg2/fedora-kernel-config-for-gentoo/6.16.0-gentoo/kernel-x86_64-fedora.config' -O "$APPL_DIR"/distro/gentoo-fedora-x86_64.config
+wget 'https://raw.githubusercontent.com/projg2/fedora-kernel-config-for-gentoo/6.17.0-gentoo/kernel-x86_64-fedora.config' -O "$APPL_DIR"/distro/gentoo-fedora-x86_64.config
 
 cd 3rdparty/gentoo-kernel-config
 git fetch

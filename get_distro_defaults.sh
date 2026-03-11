@@ -1,6 +1,6 @@
 APPL_DIR=$(dirname "$(readlink -f "$0")")
 
-wget 'https://gitlab.com/evlaV/jupiter-PKGBUILD/-/raw/master/linux-neptune-615/config-neptune?inline=false' -O "$APPL_DIR"/cfg/30_enable_steamdeck_device.config.new
+wget 'https://raw.githubusercontent.com/evlaV/jupiter/refs/heads/main/linux-neptune-616/config-neptune' -O "$APPL_DIR"/cfg/30_enable_steamdeck_device.config.new
 
 wget 'https://gitweb.gentoo.org/proj/genkernel.git/plain/defaults/kernel-generic-config' -O "$APPL_DIR"/distro/gentoo-genkernel.config
 wget 'https://gitlab.archlinux.org/archlinux/packaging/packages/linux/-/raw/main/config.x86_64?inline=false' -O "$APPL_DIR"/distro/archlinux.config
